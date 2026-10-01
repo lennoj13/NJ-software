@@ -1,5 +1,36 @@
 export const SOFTWARE_SUITE = [
   {
+    id: 'nj-dock',
+    name: 'NJ Dock',
+    category: 'Extensión de Navegador (Manifest V3)',
+    tagline: 'Barra dock flotante interactiva y minimalista para navegadores web con atajos rápidos y gestión de pestañas.',
+    version: 'v1.0.0 MV3',
+    platform: 'Google Chrome / Brave / Edge',
+    status: 'Producción Activa & GitHub',
+    icon: 'browser',
+    githubRepo: 'lennoj13/nj-dock',
+    githubUrl: 'https://github.com/lennoj13/nj-dock',
+    description: 'Extensión construida con Manifest V3 que integra un muelle (dock) lateral ultraligero y estilizado dentro de cualquier pestaña web. Permite acceder a marcadores con favicons nativos, alternar entre pestañas activas sin interrumpir la navegación, y configurar la geometría y bordes redondeados desde un menú emergente desacoplado.',
+    features: [
+      'Atajo de teclado global configurable (Alt+Shift+B) o activación por proximidad del cursor.',
+      'Gestión instantánea de marcadores del navegador con carga optimizada de iconos en favicon.',
+      'Conmutación ágil de pestañas abiertas con rastreo de eventos de puntero sin saltos bruscos.',
+      'Panel de opciones emergente rediseñado con personalización de tamaño (16px a 48px) y formas redondeadas.',
+      'Arquitectura de seguridad estricta: almacenamiento local con chrome.storage y cero dependencias de analíticas externas.'
+    ],
+    techSpecs: [
+      { label: 'Arquitectura', value: 'Manifest V3 Service Worker' },
+      { label: 'Privacidad', value: '100% Local (chrome.storage)' },
+      { label: 'Compatibilidad', value: 'Chrome 114+, Brave, Edge' },
+      { label: 'Consumo', value: '< 15MB de memoria' }
+    ],
+    subscriberPerks: [
+      'Descarga directa del paquete .crx empaquetado y firmado para instalación sin modo desarrollador.',
+      'Actualizaciones automáticas de compatibilidad ante cambios en las políticas de Chrome Web Store.',
+      'Canal directo para solicitar atajos y personalizaciones de temas de iconos.'
+    ]
+  },
+  {
     id: 'linux-dots',
     name: 'NJ Plasma Dots & Linux Suite',
     category: 'Entorno de Escritorio & Personalización Linux',
@@ -8,6 +39,7 @@ export const SOFTWARE_SUITE = [
     platform: 'Linux (KDE Plasma 5 / 6, Wayland & X11)',
     status: 'Desarrollo Activo & Mantenimiento',
     icon: 'terminal',
+    githubRepo: 'lennoj13/plasma-dots',
     description: 'Colección cuidada de dotfiles y personalización avanzada para usuarios de Linux que buscan un entorno de trabajo limpio, productivo y sin distracciones. Incluye configuraciones de paneles, atajos eficientes, esquemas de color neutrales, scripts de arranque y optimizaciones de compositor sin comprometer el rendimiento del hardware.',
     features: [
       'Scripts de autoinstalación reproducibles para configurar tu entorno en segundos.',
@@ -123,6 +155,12 @@ export const UPCOMING_PIPELINE = [
     desc: 'Herramienta de terminal para respaldar, sincronizar y desplegar entornos completos en un solo comando.',
     status: 'Fase de pruebas',
     badge: 'Linux CLI'
+  },
+  {
+    title: 'NJ Dock: Temas de Iconos Dinámicos & Atajos Avanzados',
+    desc: 'Soporte para temas CSS personalizados e integración directa con pestañas agrupadas.',
+    status: 'Actualización v1.1',
+    badge: 'Chrome Extension'
   },
   {
     title: 'NJ Car Launcher: Módulo OBD2 & Telemetría',

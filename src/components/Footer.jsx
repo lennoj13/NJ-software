@@ -56,9 +56,22 @@ export default function Footer({ onOpenLegal }) {
           {/* Col 2: Software Catálogo */}
           <div>
             <div className="font-mono text-xs uppercase tracking-wider text-neutral-300 mb-3 font-semibold">
-              Software & Proyectos
+              Software & Repositorios
             </div>
             <ul className="space-y-2 text-neutral-400 font-mono text-xs">
+              <li>
+                <button
+                  onClick={onNavigateToProjects}
+                  className="hover:text-white transition-colors text-left flex items-center gap-1.5 text-emerald-400"
+                >
+                  <span>→ Ver Todos los Proyectos (GitHub)</span>
+                </button>
+              </li>
+              <li>
+                <a href="#apps" className="hover:text-white transition-colors">
+                  NJ Dock (Extensión Chrome MV3)
+                </a>
+              </li>
               <li>
                 <a href="#apps" className="hover:text-white transition-colors">
                   KDE Plasma Dots & Linux Suite
@@ -67,16 +80,6 @@ export default function Footer({ onOpenLegal }) {
               <li>
                 <a href="#apps" className="hover:text-white transition-colors">
                   NJ Car Launcher (Android APK)
-                </a>
-              </li>
-              <li>
-                <a href="#apps" className="hover:text-white transition-colors">
-                  Herramientas de Sistema Autónomas
-                </a>
-              </li>
-              <li>
-                <a href="#apps" className="hover:text-white transition-colors">
-                  Próximos Plasmoides QML
                 </a>
               </li>
             </ul>

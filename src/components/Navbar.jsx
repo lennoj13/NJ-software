@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Github, Menu, X, ArrowRight } from 'lucide-react';
+import { Github, Menu, X, ArrowRight, FolderGit2 } from 'lucide-react';
 
-export default function Navbar({ onOpenLegal, onScrollToPricing }) {
+export default function Navbar({ currentView, onNavigate, onOpenLegal, onScrollToPricing }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -9,7 +9,10 @@ export default function Navbar({ onOpenLegal, onScrollToPricing }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* Brand */}
-        <a href="#" className="flex items-center gap-3 group">
+        <button 
+          onClick={() => onNavigate('home')} 
+          className="flex items-center gap-3 group text-left"
+        >
           <div className="w-8 h-8 rounded-lg overflow-hidden bg-neutral-900 border border-white/10 flex items-center justify-center p-0.5 group-hover:border-white/20 transition-colors">
             <img 
               src="/assets/nj_logo.png" 
@@ -26,15 +29,36 @@ export default function Navbar({ onOpenLegal, onScrollToPricing }) {
             </span>
             <span className="text-[11px] text-neutral-500 font-mono">by @lennoj13</span>
           </div>
-        </a>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-400">
-          <a href="#apps" className="hover:text-white transition-colors">Software & Dots</a>
-          <a href="#beneficios" className="hover:text-white transition-colors">Beneficios</a>
-          <a href="#comparativa" className="hover:text-white transition-colors">Comparativa</a>
-          <a href="#precios" className="hover:text-white transition-colors">Suscripción</a>
-          <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+          <button
+            onClick={() => onNavigate('home')}
+            className={`transition-colors hover:text-white ${currentView === 'home' ? 'text-white' : ''}`}
+          >
+            Suite Principal
+          </button>
+
+          <button
+            onClick={() => onNavigate('projects')}
+            className={`transition-colors hover:text-white flex items-center gap-1.5 ${
+              currentView === 'projects' ? 'text-white font-semibold' : ''
+            }`}
+          >
+            <span>Todos los Proyectos</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+          </button>
+
+          {currentView === 'home' && (
+            <>
+              <a href="#apps" className="hover:text-white transition-colors">Catálogo</a>
+              <a href="#beneficios" className="hover:text-white transition-colors">Beneficios</a>
+              <a href="#comparativa" className="hover:text-white transition-colors">Comparativa</a>
+              <a href="#precios" className="hover:text-white transition-colors">Suscripción</a>
+              <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
+            </>
+          )}
         </nav>
 
         {/* Right CTA & Social */}
@@ -44,7 +68,7 @@ export default function Navbar({ onOpenLegal, onScrollToPricing }) {
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-white/[0.05] transition-colors border border-transparent hover:border-white/10"
-            title="Ver perfil de GitHub"
+            title="Ver perfil de GitHub @lennoj13"
           >
             <Github className="w-4 h-4" />
           </a>
@@ -53,7 +77,7 @@ export default function Navbar({ onOpenLegal, onScrollToPricing }) {
             onClick={onScrollToPricing}
             className="text-xs font-medium px-4 py-2 rounded-lg bg-white text-black hover:bg-neutral-200 transition-colors tracking-tight font-sans shadow-sm flex items-center gap-1.5"
           >
-            <span>Obtener All-Access</span>
+            <span>All-Access Pass</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -70,41 +94,44 @@ export default function Navbar({ onOpenLegal, onScrollToPricing }) {
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#0c0d12] border-b border-white/10 px-4 py-4 flex flex-col gap-3 text-sm text-neutral-300">
-          <a 
-            href="#apps" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="py-2 hover:text-white"
+          <button 
+            onClick={() => { onNavigate('home'); setMobileMenuOpen(false); }}
+            className="py-2 text-left hover:text-white"
           >
-            Software & Dots
-          </a>
-          <a 
-            href="#beneficios" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="py-2 hover:text-white"
+            Suite Principal
+          </button>
+          <button 
+            onClick={() => { onNavigate('projects'); setMobileMenuOpen(false); }}
+            className="py-2 text-left hover:text-white flex items-center justify-between"
           >
-            Beneficios
-          </a>
-          <a 
-            href="#comparativa" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="py-2 hover:text-white"
-          >
-            Comparativa
-          </a>
-          <a 
-            href="#precios" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="py-2 hover:text-white"
-          >
-            Suscripción
-          </a>
-          <a 
-            href="#faq" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="py-2 hover:text-white"
-          >
-            Preguntas Frecuentes
-          </a>
+            <span>Directorio de Proyectos (GitHub)</span>
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400">Live</span>
+          </button>
+          {currentView === 'home' && (
+            <>
+              <a 
+                href="#apps" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2 hover:text-white"
+              >
+                Catálogo de Software
+              </a>
+              <a 
+                href="#precios" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2 hover:text-white"
+              >
+                Suscripción
+              </a>
+              <a 
+                href="#faq" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2 hover:text-white"
+              >
+                Preguntas Frecuentes
+              </a>
+            </>
+          )}
           <div className="pt-2 border-t border-white/10 flex items-center justify-between">
             <a
               href="https://github.com/lennoj13"
