@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Mail, Shield, ExternalLink } from 'lucide-react';
+import { Github, Mail, Shield } from 'lucide-react';
 
 export default function Footer({ onOpenLegal }) {
   return (
@@ -11,17 +11,12 @@ export default function Footer({ onOpenLegal }) {
           {/* Col 1: Brand Info */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-neutral-900 border border-white/10 flex items-center justify-center p-1">
+              <div className="w-8 h-8 rounded-lg overflow-hidden bg-neutral-900 border border-white/10 flex items-center justify-center p-0.5">
                 <img 
-                  src="/assets/nj_brand.png" 
+                  src="/assets/nj_logo.png" 
                   alt="NJ Software" 
-                  className="w-full h-full object-contain filter brightness-110" 
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
+                  className="w-full h-full object-contain" 
                 />
-                <span style={{ display: 'none' }} className="text-xs font-mono font-bold text-white">NJ</span>
               </div>
               <div>
                 <span className="text-sm font-semibold tracking-tight text-white">
@@ -34,7 +29,7 @@ export default function Footer({ onOpenLegal }) {
             </div>
 
             <p className="text-neutral-400 max-w-md leading-relaxed text-xs">
-              Ecosistema de software independiente: launchers para sistemas de infoentretenimiento en vehículos, extensiones de navegador y herramientas algorítmicas con entregas de compilaciones continuas bajo suscripción unificada.
+              Ecosistema de software independiente: dotfiles y personalizaciones para Linux (KDE Plasma), aplicaciones Android y utilidades de sistema con entregas continuas bajo suscripción unificada.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -61,9 +56,14 @@ export default function Footer({ onOpenLegal }) {
           {/* Col 2: Software Catálogo */}
           <div>
             <div className="font-mono text-xs uppercase tracking-wider text-neutral-300 mb-3 font-semibold">
-              Software en la Suite
+              Software & Proyectos
             </div>
             <ul className="space-y-2 text-neutral-400 font-mono text-xs">
+              <li>
+                <a href="#apps" className="hover:text-white transition-colors">
+                  KDE Plasma Dots & Linux Suite
+                </a>
+              </li>
               <li>
                 <a href="#apps" className="hover:text-white transition-colors">
                   NJ Car Launcher (Android APK)
@@ -71,26 +71,21 @@ export default function Footer({ onOpenLegal }) {
               </li>
               <li>
                 <a href="#apps" className="hover:text-white transition-colors">
-                  NJ ID & Portal Generator
+                  Herramientas de Sistema Autónomas
                 </a>
               </li>
               <li>
                 <a href="#apps" className="hover:text-white transition-colors">
-                  Polymarket Opportunity Bot
-                </a>
-              </li>
-              <li>
-                <a href="#apps" className="hover:text-white transition-colors">
-                  Próximos Proyectos en Desarrollo
+                  Próximos Plasmoides QML
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Compliance & Legal (Essential for Dodo Payments) */}
+          {/* Col 3: Compliance & Legal */}
           <div>
             <div className="font-mono text-xs uppercase tracking-wider text-neutral-300 mb-3 font-semibold">
-              Legal & Cumplimiento
+              Legal & Soporte
             </div>
             <ul className="space-y-2 text-neutral-400 text-xs">
               <li>
@@ -122,7 +117,7 @@ export default function Footer({ onOpenLegal }) {
                   href="mailto:jonnelanchundia@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  Soporte al Suscriptor (<span className="font-mono">&lt;24h</span>)
+                  Contacto de Soporte (<span className="font-mono">&lt;24h</span>)
                 </a>
               </li>
             </ul>
@@ -130,7 +125,7 @@ export default function Footer({ onOpenLegal }) {
 
         </div>
 
-        {/* Bottom bar with Dodo Payments Merchant of Record disclaimer */}
+        {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500 font-mono">
           <div>
             &copy; {new Date().getFullYear()} NJ Software • Jonnel Anchundia. Todos los derechos reservados.
@@ -138,7 +133,7 @@ export default function Footer({ onOpenLegal }) {
 
           <div className="flex items-center gap-2 text-neutral-400">
             <Shield className="w-3.5 h-3.5 text-neutral-500" />
-            <span>Facturación y pagos procesados por Dodo Payments Inc. (Merchant of Record)</span>
+            <span>Acceso y descargas inmediatas gestionadas por correo electrónico</span>
           </div>
         </div>
 

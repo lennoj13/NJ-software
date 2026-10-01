@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ShieldCheck, FileText, Lock, RefreshCw, Mail } from 'lucide-react';
+import { X, ShieldCheck, FileText, Lock, RefreshCw } from 'lucide-react';
 
 export default function LegalModal({ isOpen, initialTab = 'terms', onClose }) {
   const [activeTab, setActiveTab] = useState(initialTab);
@@ -18,7 +18,7 @@ export default function LegalModal({ isOpen, initialTab = 'terms', onClose }) {
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-neutral-300" />
             <h3 className="text-sm font-semibold text-white tracking-tight">
-              Políticas Legales & Cumplimiento Normativo • NJ Software
+              Políticas Legales & Condiciones de Suscripción • NJ Software
             </h3>
           </div>
           <button
@@ -75,37 +75,30 @@ export default function LegalModal({ isOpen, initialTab = 'terms', onClose }) {
           {activeTab === 'terms' && (
             <div className="space-y-4">
               <div>
-                <h4 className="text-base font-semibold text-white">1. Información del Titular y Aceptación</h4>
+                <h4 className="text-base font-semibold text-white">1. Información del Desarrollador y Aceptación</h4>
                 <p className="text-neutral-400 mt-1">
-                  NJ Software es un proyecto de desarrollo de software independiente operado por Jonnel Anchundia (<span className="font-mono text-neutral-300">jonnelanchundia@gmail.com</span>), con presencia pública de código en GitHub (<span className="font-mono text-neutral-300">@lennoj13</span>). Al adquirir una suscripción o pase de software en esta plataforma, aceptas vincularte de forma expresa por los presentes Términos de Servicio.
+                  NJ Software es un proyecto de desarrollo de software independiente operado por Jonnel Anchundia (<span className="font-mono text-neutral-300">jonnelanchundia@gmail.com</span>), con presencia pública en GitHub (<span className="font-mono text-neutral-300">@lennoj13</span>). Al adquirir una suscripción o pase de software, aceptas los presentes Términos de Servicio.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-base font-semibold text-white">2. Naturaleza del Servicio y Licencia</h4>
+                <h4 className="text-base font-semibold text-white">2. Objeto del Servicio y Licencia</h4>
                 <p className="text-neutral-400 mt-1">
-                  La suscripción NJ All-Access otorga una licencia no exclusiva, personal e intransferible para descargar, instalar y utilizar las compilaciones de software (APKs de NJ Car Launcher, extensiones de navegador y scripts de automatización), así como acceder a las actualizaciones publicadas durante el periodo de suscripción activa. Queda estrictamente prohibida la reventa, redistribución comercial no autorizada o sublicenciamiento de los archivos APK firmados o claves de acceso.
+                  La suscripción NJ All-Access otorga una licencia no exclusiva, personal e intransferible para acceder, descargar y utilizar los dotfiles y configuraciones para Linux (KDE Plasma), aplicaciones Android (APKs de NJ Car Launcher) y utilidades de sistema, así como las actualizaciones publicadas durante el periodo de suscripción activa.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-base font-semibold text-white">3. Facturación Recurrente y Procesamiento</h4>
+                <h4 className="text-base font-semibold text-white">3. Facturación y Renovación</h4>
                 <p className="text-neutral-400 mt-1">
-                  Los pagos, suscripciones y facturación son procesados de manera segura a través de <strong className="text-white">Dodo Payments</strong> en calidad de Comerciante Registrado (Merchant of Record). Las suscripciones se renuevan automáticamente al finalizar cada ciclo mensual o anual seleccionado por el cliente, a menos que se cancelen con antelación.
+                  Las suscripciones se renuevan periódicamente según el ciclo elegido (mensual o anual) para cubrir el mantenimiento continuo y la creación de nuevas herramientas. No existen cargos ocultos ni tarifas adicionales por actualizaciones de versión.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-base font-semibold text-white">4. Cancelación del Servicio</h4>
+                <h4 className="text-base font-semibold text-white">4. Cancelación Simple</h4>
                 <p className="text-neutral-400 mt-1">
-                  El suscriptor puede cancelar la renovación automática en cualquier momento desde el enlace de autoservicio provisto por Dodo Payments en cada recibo por correo electrónico, o mediante solicitud directa a <span className="font-mono text-neutral-300">jonnelanchundia@gmail.com</span>. El acceso se mantiene hasta el último día del ciclo ya abonado.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-base font-semibold text-white">5. Limitación de Responsabilidad</h4>
-                <p className="text-neutral-400 mt-1">
-                  El software se entrega bajo el principio de &quot;tal cual&quot; (as-is). NJ Software no se responsabiliza por fallas provocadas por modificaciones de firmware en radios automotrices de terceros, alteraciones de hardware o incompatibilidad de hardware no estándar.
+                  El usuario puede cancelar la suscripción en cualquier momento con 1 clic mediante el enlace incluido en su recibo de correo electrónico o escribiendo a <span className="font-mono text-neutral-300">jonnelanchundia@gmail.com</span>. El acceso se mantiene hasta la fecha final del ciclo ya pagado.
                 </p>
               </div>
             </div>
@@ -115,41 +108,23 @@ export default function LegalModal({ isOpen, initialTab = 'terms', onClose }) {
           {activeTab === 'privacy' && (
             <div className="space-y-4">
               <div>
-                <h4 className="text-base font-semibold text-white">1. Principio de Privacidad por Diseño</h4>
+                <h4 className="text-base font-semibold text-white">1. Filosofía Local-First</h4>
                 <p className="text-neutral-400 mt-1">
-                  En NJ Software valoramos la privacidad del usuario. Nuestras aplicaciones locales (como NJ Car Launcher y la extensión web) funcionan bajo arquitectura local-first o client-side; no implementan telemetría invasiva, rastreo publicitario ni recolección de hábitos de conducción.
+                  En NJ Software priorizamos la privacidad. Nuestras herramientas y dotfiles se ejecutan localmente en tu máquina o dispositivo sin rastreo de actividad, sin telemetría invasiva y sin comercialización de datos.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-base font-semibold text-white">2. Datos Recopilados</h4>
+                <h4 className="text-base font-semibold text-white">2. Datos de Contacto</h4>
                 <p className="text-neutral-400 mt-1">
-                  Únicamente recopilamos los datos estrictamente necesarios para la gestión del servicio:
-                </p>
-                <ul className="list-disc list-inside mt-2 text-neutral-400 space-y-1">
-                  <li>Dirección de correo electrónico (para el envío de recibos, accesos a descargas y actualizaciones).</li>
-                  <li>Estado de la suscripción (activo, cancelado, reembolsado).</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-base font-semibold text-white">3. Procesamiento de Pagos</h4>
-                <p className="text-neutral-400 mt-1">
-                  Toda la información bancaria y de tarjetas de crédito es gestionada directamente por <strong className="text-white">Dodo Payments</strong> bajo la normativa internacional de seguridad de datos PCI-DSS Nivel 1. NJ Software nunca tiene acceso a números de tarjeta completos ni códigos de seguridad.
+                  Únicamente solicitamos tu dirección de correo electrónico con el propósito de enviarte tus claves de licencia, enlaces de descarga directa y notificaciones sobre nuevas versiones.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-base font-semibold text-white">4. No Venta de Información</h4>
+                <h4 className="text-base font-semibold text-white">3. Seguridad en las Transacciones</h4>
                 <p className="text-neutral-400 mt-1">
-                  Bajo ninguna circunstancia vendemos, alquilamos ni transferimos datos de nuestros usuarios a empresas de publicidad o intermediarios de datos (data brokers).
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-base font-semibold text-white">5. Ejercicio de Derechos de Protección de Datos</h4>
-                <p className="text-neutral-400 mt-1">
-                  Cualquier usuario puede solicitar el acceso, rectificación o eliminación total de sus datos de contacto enviando un correo a <span className="font-mono text-neutral-300">jonnelanchundia@gmail.com</span>.
+                  Los pagos se procesan con cifrado de grado bancario bajo el protocolo SSL de 256 bits. Nunca almacenamos información de tarjetas de crédito en nuestros servidores.
                 </p>
               </div>
             </div>
@@ -161,38 +136,24 @@ export default function LegalModal({ isOpen, initialTab = 'terms', onClose }) {
               <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <h4 className="text-sm font-semibold text-white flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                  Garantía de Devolución de 14 Días
+                  Garantía Total de Devolución de 14 Días
                 </h4>
                 <p className="text-xs text-neutral-400 mt-1 leading-relaxed">
-                  Queremos que compres con total tranquilidad. Si el software no es compatible con la resolución de tu pantalla o sistema, o simplemente no satisface tus expectativas, puedes solicitar un reembolso íntegro durante los primeros 14 días posteriores a tu compra.
+                  Si tras probar las aplicaciones o configuraciones en tu entorno consideras que no se adaptan a lo que necesitas, puedes solicitar el reembolso íntegro durante los primeros 14 días posteriores a tu compra.
                 </p>
               </div>
 
               <div>
-                <h4 className="text-base font-semibold text-white">1. Cómo Solicitar un Reembolso</h4>
+                <h4 className="text-base font-semibold text-white">1. Solicitud de Reembolso</h4>
                 <p className="text-neutral-400 mt-1">
-                  Para tramitar tu devolución, únicamente debes enviar un correo electrónico a:
+                  Envía un correo electrónico a:
                 </p>
                 <div className="mt-2 p-3 rounded-lg bg-black/60 border border-white/[0.06] font-mono text-neutral-200">
                   Para: jonnelanchundia@gmail.com<br />
-                  Asunto: Solicitud de Reembolso - NJ Software [ID de Pedido Dodo]
+                  Asunto: Solicitud de Reembolso - NJ Software
                 </div>
                 <p className="text-neutral-400 mt-2">
-                  Incluye el correo utilizado en la compra o el número de factura que recibiste de Dodo Payments.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-base font-semibold text-white">2. Plazo de Procesamiento</h4>
-                <p className="text-neutral-400 mt-1">
-                  Las solicitudes de reembolso se aprueban en un plazo máximo de 24 a 48 horas hábiles. Una vez emitido el reembolso por Dodo Payments, los fondos suelen verse reflejados en tu extracto bancario en un plazo de 3 a 5 días hábiles, dependiendo de tu entidad financiera.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-base font-semibold text-white">3. Política de Cancelación de Suscripciones</h4>
-                <p className="text-neutral-400 mt-1">
-                  Si deseas cancelar una suscripción recurrente mensual o anual para que no se renueve en el siguiente ciclo, puedes hacerlo con 1 clic a través del enlace de administración presente en todos los correos de Dodo Payments o avisándonos por correo. No se aplicará ninguna penalización ni recargo adicional.
+                  Indica el correo utilizado en tu registro y procesaremos la devolución en un plazo máximo de 24 a 48 horas hábiles.
                 </p>
               </div>
             </div>
@@ -203,7 +164,7 @@ export default function LegalModal({ isOpen, initialTab = 'terms', onClose }) {
         {/* Modal Footer */}
         <div className="p-4 border-t border-white/[0.08] flex items-center justify-between bg-black/40">
           <div className="text-[11px] font-mono text-neutral-500">
-            Dodo Payments Merchant Compliance Ready
+            NJ Software • Jonnel Anchundia (@lennoj13)
           </div>
           <button
             onClick={onClose}

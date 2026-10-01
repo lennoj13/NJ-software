@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Shield, Zap, Sparkles, ArrowRight, HelpCircle } from 'lucide-react';
+import { Check, Shield, ArrowRight } from 'lucide-react';
 
 export default function Pricing({ onSelectPlan }) {
   const [billingCycle, setBillingCycle] = useState('monthly'); // 'monthly' | 'annual'
@@ -18,12 +18,13 @@ export default function Pricing({ onSelectPlan }) {
       badge: 'Flexibilidad Total',
       buttonText: 'Suscribirme por $9/mes',
       features: [
-        'Acceso completo a todos los APKs compilados y firmados de NJ Car Launcher (v6.0+).',
-        'Licencia Pro para la extensión web NJ ID & Portal Generator.',
-        'Acceso a los scripts y algoritmos de mercado (Polymarket Scanner).',
+        'Acceso completo a dotfiles y scripts de instalación para Linux (KDE Plasma).',
+        'Descarga directa de APKs optimizados y firmados de NJ Car Launcher.',
+        'Acceso a utilidades de sistema y herramientas de escritorio.',
         'Todas las actualizaciones de versión menor y mayor durante la suscripción.',
+        'Entrega inmediata de enlaces de descarga y claves a tu correo electrónico.',
         'Soporte por correo electrónico en menos de 24 horas.',
-        'Garantía de reembolso de 14 días sin preguntas.',
+        'Garantía de reembolso de 14 días sin complicaciones.',
         'Cancelación con un solo clic en cualquier momento.'
       ]
     },
@@ -39,11 +40,11 @@ export default function Pricing({ onSelectPlan }) {
       buttonText: 'Obtener Pase Anual por $79/año',
       features: [
         'Todo lo incluido en el Pase Mensual.',
-        'Acceso anticipado (Beta tester) a compilaciones antes de su publicación.',
-        'Rol de Suscriptor Pro en Discord privado con acceso directo al autor.',
-        'Votación prioritaria en el roadmap de nuevas aplicaciones y características.',
-        'Acceso garantizado a las 3 nuevas herramientas en el pipeline (Q4-Q1).',
-        'Soporte técnico prioritario de integración con hardware de vehículos.',
+        'Acceso anticipado a nuevos plasmoides y widgets QML para KDE Plasma 6.',
+        'Acceso prioritario a compilaciones de prueba antes de su publicación.',
+        'Votación en el roadmap de nuevas herramientas de sistema y funciones.',
+        'Soporte técnico prioritario y asistencia de configuración de entorno.',
+        'Entrega inmediata de credenciales a tu correo electrónico.',
         'Garantía de reembolso de 14 días y cancelación en 1 clic.'
       ]
     },
@@ -58,11 +59,11 @@ export default function Pricing({ onSelectPlan }) {
       badge: 'Acceso Vitalicio',
       buttonText: 'Adquirir Licencia Vitalicia',
       features: [
-        'Acceso permanente e ilimitado a todas las aplicaciones actuales.',
-        'Acceso a todos los nuevos proyectos de software publicados en el futuro.',
-        'Sin renovaciones ni cobros recurrentes de ningún tipo.',
-        'Canal VIP en Discord con comunicación directa con Jonnel Anchundia.',
-        'Mención como patrocinador fundador en los proyectos públicos de GitHub.',
+        'Acceso permanente e ilimitado a todas las herramientas actuales.',
+        'Acceso a todos los nuevos proyectos y dotfiles que desarrolle en el futuro.',
+        'Sin renovaciones ni cobros periódicos de ningún tipo.',
+        'Entrega de clave de licencia vitalicia a tu correo electrónico.',
+        'Comunicación directa con Jonnel Anchundia para consultas técnicas.',
         'Garantía de satisfacción completa de 14 días.'
       ]
     }
@@ -75,13 +76,13 @@ export default function Pricing({ onSelectPlan }) {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-white/[0.04] border border-white/[0.07] text-[11px] font-mono text-neutral-400 uppercase tracking-wider">
-            Planes Transparentes & Facturación
+            Planes Transparentes
           </div>
           <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-white">
             Un precio simple para todo el software presente y futuro.
           </h2>
           <p className="mt-3 text-neutral-400 text-base leading-relaxed">
-            Sin paquetes fragmentados ni tarifas ocultas. Pagos seguros procesados globalmente mediante Dodo Payments.
+            Sin paquetes fragmentados ni cargos ocultos. Acceso inmediato enviado a tu correo electrónico.
           </p>
 
           {/* Monthly / Annual Toggle */}
@@ -191,7 +192,7 @@ export default function Pricing({ onSelectPlan }) {
                   </button>
 
                   <div className="mt-3 text-center text-[10px] text-neutral-500 font-mono">
-                    Pago seguro cifrado • Dodo Payments
+                    Acceso inmediato por correo electrónico
                   </div>
                 </div>
 
@@ -200,7 +201,7 @@ export default function Pricing({ onSelectPlan }) {
           })}
         </div>
 
-        {/* Guarantee Banner (Crucial for Dodo Payments approval) */}
+        {/* Guarantee Banner */}
         <div className="mt-16 max-w-3xl mx-auto rounded-2xl glass-surface p-6 border border-white/[0.08] flex flex-col sm:flex-row items-center gap-5">
           <div className="w-12 h-12 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center flex-shrink-0">
             <Shield className="w-6 h-6 text-neutral-200" />
@@ -210,7 +211,7 @@ export default function Pricing({ onSelectPlan }) {
               Garantía de Satisfacción Total de 14 Días
             </h4>
             <p className="text-xs text-neutral-400 mt-1 leading-relaxed">
-              Si el software no funciona en la pantalla de tu coche o no cubre tus necesidades, te devolvemos el 100% de tu dinero sin preguntas. Además, puedes cancelar tu suscripción con 1 clic en cualquier momento sin penalizaciones.
+              Si el software o las configuraciones no cumplen tus expectativas, te devolvemos el 100% de tu dinero sin preguntas. Además, puedes cancelar tu suscripción con 1 clic en cualquier momento sin penalizaciones.
             </p>
           </div>
         </div>

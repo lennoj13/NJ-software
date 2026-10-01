@@ -11,27 +11,27 @@ export default function Features() {
     {
       icon: <RefreshCw className="w-5 h-5 text-neutral-200" />,
       title: 'Mantenimiento Continuo de Versión',
-      desc: 'El software automotriz y las extensiones web sufren cambios constantes por nuevas políticas de sistemas. Tu suscripción cubre mantenimiento y parches continuos.'
+      desc: 'Tanto los entornos Linux (KDE Plasma) como Android reciben actualizaciones periódicas de sistema. Tu suscripción cubre mantenimiento y parches continuos.'
     },
     {
       icon: <Lock className="w-5 h-5 text-neutral-200" />,
       title: 'Privacidad por Diseño (Zero-Tracking)',
-      desc: 'Nuestras aplicaciones no insertan publicidad de terceros, no ejecutan telemetría invasiva ni venden datos a intermediarios publicitarios.'
+      desc: 'Nuestras aplicaciones y configuraciones no insertan publicidad, no ejecutan telemetría invasiva ni venden datos a intermediarios publicitarios.'
     },
     {
       icon: <MessageSquare className="w-5 h-5 text-neutral-200" />,
-      title: 'Canal Directo de Soporte & Discord',
-      desc: 'Habla directamente con el desarrollador (Jonnel Anchundia) para resolver problemas de compatibilidad con modelos de radio específicos o sugerir características.'
+      title: 'Canal Directo de Soporte',
+      desc: 'Habla directamente con el desarrollador (Jonnel Anchundia) para resolver problemas de compatibilidad o sugerir nuevos plasmoides y características.'
     },
     {
       icon: <Zap className="w-5 h-5 text-neutral-200" />,
       title: 'Acceso Temprano a Todo lo Nuevo',
-      desc: 'Cualquier software, bot o utilidad que desarrolle en el futuro queda automáticamente desbloqueada para los suscriptores activos sin pagos adicionales.'
+      desc: 'Cualquier software, plasmoide, dotfile o utilidad que desarrolle en el futuro queda automáticamente desbloqueada para los suscriptores activos.'
     },
     {
       icon: <Terminal className="w-5 h-5 text-neutral-200" />,
       title: 'Arquitectura Limpia & Código Auditable',
-      desc: 'Proyectos basados en tecnologías probadas (Flutter, React 19, Python 3.11), con código auditable en GitHub para máxima transparencia y confiabilidad.'
+      desc: 'Proyectos basados en tecnologías nativas (C++/Qt, Flutter, Python, Shell), con código auditable en GitHub para máxima transparencia y confiabilidad.'
     }
   ];
 

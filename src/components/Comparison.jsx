@@ -1,54 +1,48 @@
 import React from 'react';
-import { Check, X, ShieldAlert, Sparkles, HelpCircle } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export default function Comparison() {
   const comparisonRows = [
     {
-      feature: 'Formato de entrega',
-      free: 'Código fuente sin compilar (requiere Flutter, Dart, NDK, Python)',
-      pro: 'APKs firmados listos para instalar, extensiones empaquetadas e instaladores directos',
+      feature: 'Acceso a Dotfiles & Personalización KDE Plasma',
+      free: 'Configuración manual fragmentada sin scripts de despliegue',
+      pro: 'Repositorio privado con scripts de autoinstalación y actualizaciones para Plasma 6',
       isProAdvantage: true
     },
     {
-      feature: 'Acceso a NJ Car Launcher v6.0+',
-      free: 'Requiere clonar repositorio y compilar manualmente en Android Studio',
-      pro: 'Descarga directa de APK de producción optimizado para arquitecturas ARM y x86',
+      feature: 'Compilaciones de NJ Car Launcher (Android)',
+      free: 'Requiere clonar código y compilar manualmente con Flutter SDK y NDK',
+      pro: 'Descarga directa de APKs optimizados y firmados listos para instalar',
       isProAdvantage: true
     },
     {
-      feature: 'Actualizaciones de compatibilidad',
-      free: 'Sujeto a commits esporádicos en GitHub público',
-      pro: 'Actualizaciones continuas prioritarias ante cambios de Android y navegadores',
+      feature: 'Mantenimiento continuo y parches',
+      free: 'Sujeto a commits esporádicos sin garantía de soporte',
+      pro: 'Actualizaciones prioritarias ante cambios del sistema operativo y librerías',
       isProAdvantage: true
     },
     {
-      feature: 'Extensión Web Pro (ID & Portal Generator)',
-      free: 'Versión web básica con marcas de agua o dependencias locales',
-      pro: 'Suite Pro completa, plantillas premium desbloqueadas y exportación por lotes',
+      feature: 'Nuevos plasmoides, utilidades y herramientas futuras',
+      free: 'No incluidos en acceso directo',
+      pro: 'Acceso automático a todo el software que se publique bajo NJ Software',
       isProAdvantage: true
     },
     {
-      feature: 'Scripts analíticos & Polymarket Bot',
-      free: 'Ejecución manual básica sin presets',
-      pro: 'Presets optimizados de latencia, esquemas SQLite y soporte de configuración',
+      feature: 'Entrega de archivos y claves',
+      free: 'Descarga manual desde repositorio público',
+      pro: 'Entrega directa instantánea por correo electrónico y portal de suscriptor',
       isProAdvantage: true
     },
     {
-      feature: 'Nuevas aplicaciones y herramientas futuras',
-      free: 'No garantizadas ni integradas',
-      pro: 'Acceso total inmediato a cada nuevo software publicado bajo NJ Software',
-      isProAdvantage: true
-    },
-    {
-      feature: 'Soporte técnico y canal directo',
-      free: 'Issues públicos sin tiempo de respuesta garantizado',
-      pro: 'Soporte prioritario por correo (<24h) y canal privado de Discord con el autor',
+      feature: 'Canal de soporte y resolución de dudas',
+      free: 'Sin tiempo de respuesta garantizado',
+      pro: 'Soporte prioritario por correo (<24h) directo con el autor (@lennoj13)',
       isProAdvantage: true
     },
     {
       feature: 'Garantía de reembolso y cancelación',
-      free: 'N/A (Sin soporte comercial)',
-      pro: '14 días de reembolso total garantizado con procesamiento seguro de Dodo Payments',
+      free: 'N/A',
+      pro: '14 días de reembolso garantizado y cancelación con 1 clic en cualquier momento',
       isProAdvantage: true
     }
   ];
@@ -60,17 +54,17 @@ export default function Comparison() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-white/[0.04] border border-white/[0.07] text-[11px] font-mono text-neutral-400 uppercase tracking-wider">
-            Propuesta de Valor Comercial
+            Propuesta de Valor
           </div>
           <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-white">
-            ¿Por qué suscribirse en lugar de usar repositorios en crudo?
+            ¿Por qué suscribirse al All-Access Pass?
           </h2>
           <p className="mt-3 text-neutral-400 text-base leading-relaxed">
-            Mantenemos el espíritu abierto del software, pero ofrecemos compilaciones de producción listas para el usuario final, soporte riguroso y mantenimiento técnico activo a nuestros suscriptores.
+            Ahorra horas de configuración manual. Obtén instaladores listos para producción, dotfiles pulidos y soporte continuo para todas tus plataformas.
           </p>
         </div>
 
-        {/* Table Container with clean monochrome borders */}
+        {/* Table Container */}
         <div className="mt-14 max-w-5xl mx-auto rounded-2xl glass-surface overflow-hidden border border-white/[0.08]">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
@@ -82,13 +76,13 @@ export default function Comparison() {
                     Característica / Servicio
                   </th>
                   <th className="py-4 px-6 text-neutral-500 font-mono text-xs uppercase tracking-wider w-3/10">
-                    GitHub Libre (Código Base)
+                    Repositorios Básicos
                   </th>
                   <th className="py-4 px-6 text-white font-mono text-xs uppercase tracking-wider w-3/10 bg-white/[0.03]">
                     <div className="flex items-center gap-1.5">
                       <span>NJ All-Access Pass</span>
                       <span className="text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                        Recomendado
+                        Suscripción
                       </span>
                     </div>
                   </th>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, ShieldCheck, Github, ExternalLink, Menu, X } from 'lucide-react';
+import { Github, Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Navbar({ onOpenLegal, onScrollToPricing }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,23 +10,18 @@ export default function Navbar({ onOpenLegal, onScrollToPricing }) {
         
         {/* Brand */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-lg bg-neutral-900 border border-white/10 flex items-center justify-center overflow-hidden p-1 group-hover:border-white/20 transition-colors">
+          <div className="w-8 h-8 rounded-lg overflow-hidden bg-neutral-900 border border-white/10 flex items-center justify-center p-0.5 group-hover:border-white/20 transition-colors">
             <img 
-              src="/assets/nj_brand.png" 
+              src="/assets/nj_logo.png" 
               alt="NJ Software Logo" 
-              className="w-full h-full object-contain filter brightness-110"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'flex';
-              }}
+              className="w-full h-full object-contain"
             />
-            <span style={{ display: 'none' }} className="text-xs font-mono font-bold text-white">NJ</span>
           </div>
           <div className="flex flex-col">
             <span className="text-sm font-semibold tracking-tight text-white flex items-center gap-2">
               NJ Software
               <span className="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-white/[0.06] text-neutral-400 border border-white/[0.06]">
-                Suite
+                Studio
               </span>
             </span>
             <span className="text-[11px] text-neutral-500 font-mono">by @lennoj13</span>
@@ -35,7 +30,7 @@ export default function Navbar({ onOpenLegal, onScrollToPricing }) {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-400">
-          <a href="#apps" className="hover:text-white transition-colors">Catálogo de Software</a>
+          <a href="#apps" className="hover:text-white transition-colors">Software & Dots</a>
           <a href="#beneficios" className="hover:text-white transition-colors">Beneficios</a>
           <a href="#comparativa" className="hover:text-white transition-colors">Comparativa</a>
           <a href="#precios" className="hover:text-white transition-colors">Suscripción</a>
@@ -56,9 +51,10 @@ export default function Navbar({ onOpenLegal, onScrollToPricing }) {
 
           <button
             onClick={onScrollToPricing}
-            className="text-xs font-medium px-4 py-2 rounded-lg bg-white text-black hover:bg-neutral-200 transition-colors tracking-tight font-sans shadow-sm"
+            className="text-xs font-medium px-4 py-2 rounded-lg bg-white text-black hover:bg-neutral-200 transition-colors tracking-tight font-sans shadow-sm flex items-center gap-1.5"
           >
-            Obtener All-Access Pass
+            <span>Obtener All-Access</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
 
@@ -79,7 +75,7 @@ export default function Navbar({ onOpenLegal, onScrollToPricing }) {
             onClick={() => setMobileMenuOpen(false)}
             className="py-2 hover:text-white"
           >
-            Catálogo de Software
+            Software & Dots
           </a>
           <a 
             href="#beneficios" 
