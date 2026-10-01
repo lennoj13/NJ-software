@@ -1,7 +1,7 @@
 import React from 'react';
 import { Github, Mail, Shield } from 'lucide-react';
 
-export default function Footer({ onOpenLegal }) {
+export default function Footer({ onOpenLegal, onNavigateToProjects }) {
   return (
     <footer className="border-t border-white/[0.08] bg-[#07080b] py-16 text-xs text-neutral-400 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

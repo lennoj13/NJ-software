@@ -109,12 +109,27 @@ function detectCategory(repo) {
 }
 
 export default function ProjectsPage({ onBackToHome, onOpenCheckout }) {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [repos, setRepos] = useState(() => {
+    try {
+      const cached = localStorage.getItem('nj_github_cache');
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Array.isArray(parsed.data) && parsed.data.length > 0) return parsed.data;
+      }
+    } catch (e) {}
+    return FALLBACK_REPOS;
+  });
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
-  const [lastSyncTime, setLastSyncTime] = useState(null);
+  const [lastSyncTime, setLastSyncTime] = useState(() => {
+    try {
+      const cached = localStorage.getItem('nj_github_cache');
+      if (cached) return new Date(JSON.parse(cached).time);
+    } catch (e) {}
+    return new Date();
+  });
 
   // Fetch live repos from GitHub API
   const fetchGitHubRepos = async () => {
